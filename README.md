@@ -1,3 +1,4 @@
+![Visitor](https://visitor-badge.laobi.icu/badge?page_id=KilianKegel.kiliankegel)
 # <!--<img src="https://github.com/KilianKegel/pictures/blob/master/refresh-icon.png"  width="48" height="48">-->Toro C Library (formerly known as Torito C Library)
 * [Use cases](https://github.com/KilianKegel/toro-C-Library#use-cases)<br>
 * [Implemenation Status](https://github.com/KilianKegel/toro-C-Library#implementation-status)<br>
@@ -23,7 +24,7 @@ Additions of a C Library function set won't be done for "torito C Library" but f
 
 **toro C Library** is an implementation targeting the ANSI/ISO C Standard Library compatibility
 to create applications for different operating systems using
-design --and debug-- infrastructure provided by Microsoft Visual Studio 2022 VS2022.
+design –and debug– infrastructure provided by Microsoft Visual Studio 2022 VS2022.
 
 ## Use cases
 1.  create menu driven applications for the UEFI shell execution environment
@@ -40,12 +41,12 @@ design --and debug-- infrastructure provided by Microsoft Visual Studio 2022 VS2
 
 ## Implementation Status
 <table>
-<tr> <th colspan="2">Toro C Library specific extensions</th>                                                                                                                       
+<tr> <th colspan="2">non-C-Standard, Toro C Library specific extensions</th>                                                                                                                       
     <th><img src="https://github.com/KilianKegel/pictures/blob/master/Windows11-logo.png" width="80" height="40"></th> 
     <th><img src="https://github.com/KilianKegel/pictures/blob/master/uefi-logo.png" width="40" height="40">SHELL</th>
     <th><img src="https://github.com/KilianKegel/pictures/blob/master/uefi-logo.png" width="40" height="40"> DXE </th>
     <th><img src="https://github.com/KilianKegel/pictures/blob/master/uefi-logo.png" width="40" height="40"> PEI </th> </tr> 
-    <tr><td><a href="https://github.com/KilianKegel/Visual-TORO-C-LIBRARY-for-UEFI/blob/main/toroCLibrary/Library/string_h/_StrEfiError.c">char* _strefierror(EFI_STATUS errcode) </a></td><td></a>Gets a EFI_STATUS message string</td><td>&#x2610</td><td>&#x2611</td><td>&#x2611</td><td>&#x2611</td>
+    <tr><td><a href="https://github.com/KilianKegel/Visual-TORO-C-LIBRARY-for-UEFI/blob/main/toroCLibrary/Library/string_h/_StrEfiError.c">char* _strefierror(EFI_STATUS errcode) </a></td><td></a>UEFI counterpart of strerror()</td><td>&#x2610</td><td>&#x2611</td><td>&#x2611</td><td>&#x2611</td>
 </tr>
 <tr> <th colspan="2">Diagnostics < assert.h ></th>                                                                                                                       
     <th><img src="https://github.com/KilianKegel/pictures/blob/master/Windows11-logo.png" width="80" height="40"></th> 
@@ -388,7 +389,7 @@ design --and debug-- infrastructure provided by Microsoft Visual Studio 2022 VS2
 </table>
 
 ## Source Code
-https://github.com/KilianKegel/Visual-TORO-C-LIBRARY-for-UEFI
+[![Repo name](https://github-readme-stats.vercel.app/api/pin/?username=KilianKegel&repo=Visual-TORO-C-LIBRARY-for-UEFI)](https://github.com/KilianKegel/Visual-TORO-C-LIBRARY-for-UEFI)
 
 
 ## Goal
@@ -405,7 +406,7 @@ The **toro C Library** shall provide full library compatibility with
 * ISO/IEC 9899 First edition 1990-12-15, Amendment 1, 1995-04-01 ("C95")
 
 ### Forwards to the roots
-Extentions to these standards (ISO 9899:1999 etc.), [*secure*](https://docs.microsoft.com/en-us/cpp/c-runtime-library/security-features-in-the-crt?view=vs-2019) / *bounds checking interface* functions `xyz_s()` from [ISO 9899:2011, Annex K](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf#page=600), [POSIX](https://en.wikipedia.org/wiki/C_POSIX_library) functions or  Microsoft specific add-ons will be implemented [_on demand_](https://github.com/KilianKegel/torito-C-Library#non-standard-c90c95-functions-that-will-be-implemented-on-demand) into **toro C Library**.
+Extensions to these standards (ISO 9899:1999 etc.), [*secure*](https://docs.microsoft.com/en-us/cpp/c-runtime-library/security-features-in-the-crt?view=vs-2019) / *bounds checking interface* functions `xyz_s()` from [ISO 9899:2011, Annex K](http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf#page=600), [POSIX](https://en.wikipedia.org/wiki/C_POSIX_library) functions or  Microsoft specific add-ons will be implemented [_on demand_](https://github.com/KilianKegel/torito-C-Library#non-standard-c90c95-functions-that-will-be-implemented-on-demand) into **toro C Library**.
 
 Be aware, that functions like <del>[`stricmp()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/stricmp-wcsicmp?view=vs-2019) (case sensitive string handling), [`itoa()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/itoa-itow?view=vs-2019) (integer to string conversion)</del>,
 a very famous [`kbhit()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/posix-kbhit?view=vs-2019) (check for keystroke at console[<sup>0</sup>](https://github.com/KilianKegel/torito-C-Library/blob/master/footnotes/footnote-1.md)), 
@@ -475,7 +476,8 @@ int main(int argc, char **argv){
 }
 ```
 
-WELCOME.c can be translated in the VS2022 64Bit command line environment by running the [build.bat](https://github.com/KilianKegel/torito-C-Library/blob/master/build.bat) script below:
+WELCOME.c can be translated in the [VS2022 64Bit command line environment](https://github.com/tianocore/edk2-staging/blob/CdePkg/blogs/2021-11-14/README.md#starting-visual-studio-2022)
+by running the [build.bat](https://github.com/KilianKegel/torito-C-Library/blob/master/build.bat) script below:
 
 ```bat
 @echo off
@@ -517,6 +519,39 @@ To run **Visual Studio 2022** .EFI samples, check out [Visual-ANSI-C-for-UEFI-Sh
 * <del>[`_ltoa()`](https://docs.microsoft.com/en-us/cpp/c-runtime-library/reference/itoa-itow?view=msvc-160)</del>
 
 ## Revision history
+### 20230916
+* improve debug trace CDETRACE() configuration switches
+    * `#define CDEDBG STDOUT` – traces directed to stdout
+    * `#define CDEDBG STDERR` – traces directed to stderr
+    * `#define CDEDBG STDDBG` – traces directed to CDE debug channel, normally COM1, I/O 0x3F8 115200,8,n,1
+    * `CDEDBG` undefined – UEFI Shell/post DRIVERS: STDDBG, Windows NT: STDOUT
+### 20230909
+* add `CDE`(*C Development Environment*)-interface for native **Tianocore UEFI SHELL** [`UEFISHELLDRV`](https://github.com/KilianKegel/Visual-TORO-C-LIBRARY-for-UEFI/tree/main/toroCLibrary/OSInterface/UEFISHELLDRV).<br>
+  Enable [**Toro-C-Library**–`DXE`](https://github.com/KilianKegel/toro-C-Library#implementation-status) function set at `CRT0()`
+  and full [**Toro-C-Library**–`SHELL`](https://github.com/KilianKegel/toro-C-Library#implementation-status) function set with availability
+  of the `EfiShellProtocol`/`EFI_SHELL_PROTOCOL_GUID`:<br>
+  https://github.com/KilianKegel/Visual-TORO-C-LIBRARY-for-UEFI/tree/main/toroCLibrary/OSInterface/UEFISHELLDRV<br>
+
+  This is the foundation of an **ANSI-C-API**-extended "**CDE UEFI SHELL**"
+
+* prepare `system()` **ANSI-C-API** call for MSDOS drive name support (**A:**, **B:**, **C:** ...) coming soon for [**Visual-UEFI-SHELL**](https://github.com/KilianKegel/Visual-UEFI-SHELL#edk2-uefi-shell--visual-uefi-shell)
+* update [`MdePkg`](https://github.com/KilianKegel/MdePkgInc) to version **edk2-stable202308**
+* improve [`CDEABI`](https://github.com/KilianKegel/Visual-TORO-C-LIBRARY-for-UEFI/blob/main/README.md#20230212) (*C Development Environment Application Binary Interface*)<br>
+    * force *all* `Core` and operating system interface `osif` modules to uses exclusively **ANSI-C-API** on `CDEABI` to avoid collision with EDK2 `StdLibC` and relatives<br>
+      primarily remaining `errno()`, `setjmp()`, `longjmp()`, `strlen()`, `strcpy()`, `strcmp()`, `wcslen()`, `wcscpy()`, `wcscmp()`
+* improve `freopen()` to set *redirection flag* `O_CDEREDIR` to speed up character transission to file
+* fix `fscanf()`: assignment suppression indicated by a "*": https://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf#page=295 
+* fix `raise()`
+* INTERN: 
+	* add:  `size_t _cdeInt2EfiStatus(int intstatus)`
+	* add:  `int _cdeEfiStatus2Int(size_t Status)`
+	* move selected file functions to [`CdeAppIf`](https://github.com/KilianKegel/CdePkg/blob/master/Include/CdeServices.h#L421) driver side.<br>
+	This allows future/upcoming code size reduced shell application type.
+	* preliminary: LINUX-OSIF buildable, ALPHA
+	* preliminary: `osifCdeUefiShellAppEntryPoint()`, `osifCdeUefiShellAppCRT0Service()` for future/upcoming shell application type
+        that doesn't include entire `CdeAppIf` machine code to each .EFI application, but share `CdeAppIf` provided by a **CDE UEFI SHELL**.
+        This allows code size reduced applications.
+
 ### 20230625
 * add Standard C95 Library functions: 
 	- [`mbrlen()`](https://github.com/KilianKegel/Visual-TORO-C-LIBRARY-for-UEFI/blob/main/toroCLibrary/Library/wchar_h/mbrlen.c)
@@ -649,11 +684,11 @@ The improvements provided here only affects PEI drivers, based on **toro C Libra
 * simplify `CDETRACE()` implemantation, improve portability of that `CdePkg` specific debug macro
 * add `_strefierror()`: rename Toro-C-Library UEFI-specific function `strefierror()` to ANSI C naming convention compatible `_strefierror()`
 * implement full `__chkstk()` for Windows 64Bit: https://docs.microsoft.com/en-us/windows/win32/devnotes/-win32-chkstk
-* partially implementation of the %G `fprintf()`-- format specifier for [Visual-LIBXLSXWRITER-for-UEFI-Shell](https://github.com/KilianKegel/Visual-LIBXLSXWRITER-for-UEFI-Shell#visual-libxlsxwriter-for-uefi-shell)
+* partially implementation of the %G `fprintf()` – format specifier for [Visual-LIBXLSXWRITER-for-UEFI-Shell](https://github.com/KilianKegel/Visual-LIBXLSXWRITER-for-UEFI-Shell#visual-libxlsxwriter-for-uefi-shell)
 * fixed `fread()` end-of-file indicator not set correctly when EOF is reached within a buffer instead of reading of 0 bytes from the mass storage device
 * changed exit code of the `abort()` function from 3 to 0xC0000409
 * fixed: reassigned (by running `freopen()`) filepointers to `stdout`/`stderr` are not flushed at exit
-* `CdePkg`--SMM Driver: Erroneous message shown at startup: `FATAL ERROR : CdeServices SMM not available`
+* `CdePkg`– SMM Driver: Erroneous message shown at startup: `FATAL ERROR : CdeServices SMM not available`
 
 ### 20220109
 * add Standard C Library functions: 
